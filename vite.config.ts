@@ -6,7 +6,7 @@ import ssr from 'vite-plugin-ssr/plugin';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    ssr(),
+    ssr({ prerender: true }),
     tailwindcss(),
     react({
       babel: {
