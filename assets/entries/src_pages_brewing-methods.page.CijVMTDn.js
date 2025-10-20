@@ -1,1 +1,0 @@
-import{j as r}from"../chunks/chunk-CguFfjte.js";import{c as s}from"../chunks/chunk-Bgya2NOn.js";function i(){const t=s.c(1);let e;return t[0]===Symbol.for("react.memo_cache_sentinel")?(e=r.jsxs("div",{className:"p-8",children:[r.jsx("p",{children:"Brewing Methods"}),r.jsx("a",{href:"/",className:"text-blue-500",children:"← Back to Home"})]}),t[0]=e):e=t[0],e}export{i as Page};
