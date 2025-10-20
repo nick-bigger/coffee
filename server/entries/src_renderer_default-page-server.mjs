@@ -1,17 +1,13 @@
-import React from "react";
+import { jsx } from "react/jsx-runtime";
+import "react";
 import ReactDOMServer from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
-
-export { render };
-
 async function render(pageContext) {
   const { Page, pageProps } = pageContext;
   const viewHtml = ReactDOMServer.renderToString(
-    <Page {...pageProps} />
+    /* @__PURE__ */ jsx(Page, { ...pageProps })
   );
-
   const title = "Coffee Grounds";
-
   return escapeInject`<!DOCTYPE html>
     <html>
       <head>
@@ -23,3 +19,6 @@ async function render(pageContext) {
       </body>
     </html>`;
 }
+export {
+  render
+};

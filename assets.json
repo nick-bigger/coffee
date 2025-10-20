@@ -1,0 +1,99 @@
+{
+  "_chunk-Bgya2NOn.js": {
+    "file": "assets/chunks/chunk-Bgya2NOn.js",
+    "name": "compiler-runtime",
+    "imports": [
+      "_chunk-CguFfjte.js"
+    ]
+  },
+  "_chunk-CL-tWuRA.js": {
+    "file": "assets/chunks/chunk-CL-tWuRA.js",
+    "name": "executeOnRenderClientHook"
+  },
+  "_chunk-CguFfjte.js": {
+    "file": "assets/chunks/chunk-CguFfjte.js",
+    "name": "jsx-runtime"
+  },
+  "node_modules/vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js": {
+    "file": "assets/entries/entry-client-routing.D_lYCuHs.js",
+    "name": "entries/entry-client-routing",
+    "src": "node_modules/vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_chunk-CL-tWuRA.js"
+    ],
+    "dynamicImports": [
+      "src/pages/brewing-methods.page.tsx",
+      "src/pages/coffee-beans.page.tsx",
+      "src/pages/index.page.tsx",
+      "src/renderer/_default.page.client.jsx",
+      "src/renderer/_default.page.server.jsx?extractAssets&lang.jsx"
+    ]
+  },
+  "node_modules/vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js": {
+    "file": "assets/entries/entry-server-routing.pVCfZTb0.js",
+    "name": "entries/entry-server-routing",
+    "src": "node_modules/vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_chunk-CL-tWuRA.js"
+    ],
+    "dynamicImports": [
+      "src/pages/brewing-methods.page.tsx",
+      "src/pages/coffee-beans.page.tsx",
+      "src/pages/index.page.tsx",
+      "src/renderer/_default.page.client.jsx",
+      "src/renderer/_default.page.server.jsx?extractAssets&lang.jsx"
+    ]
+  },
+  "src/pages/brewing-methods.page.tsx": {
+    "file": "assets/entries/src_pages_brewing-methods.page.CijVMTDn.js",
+    "name": "entries/src/pages/brewing-methods.page",
+    "src": "src/pages/brewing-methods.page.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CguFfjte.js",
+      "_chunk-Bgya2NOn.js"
+    ]
+  },
+  "src/pages/coffee-beans.page.tsx": {
+    "file": "assets/entries/src_pages_coffee-beans.page.UJQqA6zA.js",
+    "name": "entries/src/pages/coffee-beans.page",
+    "src": "src/pages/coffee-beans.page.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CguFfjte.js",
+      "_chunk-Bgya2NOn.js"
+    ]
+  },
+  "src/pages/index.page.tsx": {
+    "file": "assets/entries/src_pages_index.page.BkRNi5PQ.js",
+    "name": "entries/src/pages/index.page",
+    "src": "src/pages/index.page.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CguFfjte.js",
+      "_chunk-Bgya2NOn.js"
+    ]
+  },
+  "src/renderer/_default.page.client.jsx": {
+    "file": "assets/entries/src_renderer_default.page.client.Dla8RJmS.js",
+    "name": "entries/src/renderer/_default.page.client",
+    "src": "src/renderer/_default.page.client.jsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CguFfjte.js"
+    ]
+  },
+  "src/renderer/_default.page.server.jsx?extractAssets&lang.jsx": {
+    "file": "assets/entries/src_renderer_default.page.server.extractAssets.l0sNRNKZ.js",
+    "name": "entries/src/renderer/_default.page.server.jsx_extractAssets_lang",
+    "src": "src/renderer/_default.page.server.jsx?extractAssets&lang.jsx",
+    "isEntry": true,
+    "isDynamicEntry": true
+  }
+}
