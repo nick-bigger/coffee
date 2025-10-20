@@ -1,3 +1,5 @@
+import { Link } from "../components/Link";
+
 export { Page };
 
 function Page() {
@@ -12,9 +14,9 @@ function Page() {
       <ul>
         {articles.map((article) => (
           <li key={article.slug}>
-            <a href={`/${article.slug}`} className="text-blue-500 hover:underline">
+            <Link href={`/${article.slug}`} className="text-blue-500 hover:underline">
               {article.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
