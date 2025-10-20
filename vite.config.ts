@@ -7,8 +7,8 @@ import ssr from 'vite-plugin-ssr/plugin';
 export default defineConfig({
   base: "/coffee/",
   plugins: [
-    ssr({ prerender: true }),
     tailwindcss(),
+    ssr({ prerender: true }),
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],

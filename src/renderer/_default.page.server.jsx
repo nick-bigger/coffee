@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
+import { PageShell } from "./PageShell";
 
 export { render };
 
 async function render(pageContext) {
   const { Page, pageProps } = pageContext;
-  const viewHtml = ReactDOMServer.renderToString(
-    <Page {...pageProps} />
-  );
+  const pageHtml = ReactDOMServer.renderToString(
+    <PageShell>
+      <Page {...pageProps} />
+    </PageShell>
+  )
+
 
   const title = "Coffee Grounds";
 
@@ -16,10 +20,9 @@ async function render(pageContext) {
     <html>
       <head>
         <title>${title}</title>
-        <link href="/src/index.css" rel="stylesheet">
       </head>
       <body>
-        <div id="page-view">${dangerouslySkipEscape(viewHtml)}</div>
+        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
 }
