@@ -16,13 +16,15 @@ async function render(pageContext) {
 
   const title = "Coffee Grounds";
 
+  const pageViewStyle = 'width: 100%; min-height: 100vh;'; 
+
   return escapeInject`<!DOCTYPE html>
     <html>
       <head>
         <title>${title}</title>
-      </head>
+        </head>
       <body>
-        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
+        <div id="page-view" style="${pageViewStyle}">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
 }

@@ -4,8 +4,7 @@ import './PageShell.css'
 export function PageShell({ children }: React.PropsWithChildren) {
   return (
     <React.StrictMode>
-      
-        {children}
+      {children}
     </React.StrictMode>
   )
 }
