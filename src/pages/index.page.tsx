@@ -1,22 +1,12 @@
+import Markdown from "react-markdown";
+import CoffeeGroundsContent from "../articles/coffee-grounds.md?raw";
 
 export { Page };
 
 function Page() {
   const articles = [
-    { slug: "coffee-beans", title: "The Best Coffee Beans" },
-    { slug: "brewing-methods", title: "Top Brewing Methods" },
+    { slug: "coffee-grounds", title: "Coffee Grounds", content: CoffeeGroundsContent },
   ];
-
-  const loremIpsum = (
-    <>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-      <p>
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nunc vel risus commodo viverra maecenas accumsan lacus vel. Pellentesque habitant morbi tristique senectus et netus et malesuada.
-      </p>
-    </>
-  );
 
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
@@ -47,7 +37,16 @@ function Page() {
                   </p>
                 </h2>
 
-                <div className="text-base leading-relaxed">{loremIpsum}</div>
+                <Markdown components={{
+                  a(props) {
+                    return <a className="text-sm" {...props} />;
+                  },
+                  p(props) {
+                    return <p className="text-sm" {...props} />;
+                  }
+                }}>
+                    {article.content}
+                </Markdown>
                 
               </section>
             ))}
