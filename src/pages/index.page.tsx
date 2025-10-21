@@ -1,4 +1,3 @@
-import { Link } from "../components/Link";
 
 export { Page };
 
@@ -24,9 +23,9 @@ function Page() {
 
       <header className="max-w-5xl w-full px-8 pt-8 md:px-12 md:pt-12 lg:px-16 lg:pt-16 mb-16">
         <h1 className="!text-3xl !mb-0 font-bold uppercase tracking-widest">
-          <Link href="/" className="no-underline hover:no-underline">
+          <h1 className="no-underline hover:no-underline">
             Coffee Grounds
-          </Link>
+          </h1>
         </h1>
       </header>
       
@@ -34,12 +33,6 @@ function Page() {
         
         <aside className="w-36 pr-8 flex-shrink-0 hidden md:block">
           <p>By Nick Bigger</p>
-          <nav className="flex flex-col space-y-2 mb-8 text-end">
-            <Link href="#">Archive</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
-            <Link href="#">Feeds</Link>
-          </nav>
         </aside>
 
         <main className="flex-1 max-w-xl md:pl-8">
@@ -49,12 +42,9 @@ function Page() {
               <section key={article.slug} className="space-y-4">
                 
                 <h2 className="text-lg font-normal mt-0">
-                  <Link
-                    href={`/${article.slug}`}
-                    className="font-normal"
-                  >
+                  <p className="font-normal">
                     {article.title}
-                  </Link>
+                  </p>
                 </h2>
 
                 <div className="text-base leading-relaxed">{loremIpsum}</div>
