@@ -42,7 +42,7 @@ function Page() {
                     return <a className="text-sm" {...props} />;
                   },
                   p(props) {
-                    return <p className="text-sm" {...props} />;
+                    return <p className="text-md md:text-sm" {...props} />;
                   }
                 }}>
                     {article.content}

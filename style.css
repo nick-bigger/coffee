@@ -103,6 +103,32 @@ body {
   margin-bottom: 1em;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 8px 12px;
+  border: 1px solid #555;
+  white-space: nowrap;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .content-wrapper {
