@@ -17,7 +17,7 @@ function Page() {
         {articles.map((article) => (
           <section key={article.slug} className="space-y-4">
             <h2 className="text-lg font-normal mt-0">
-              <p className="font-normal underline underline-offset-[4px] decoration-[0.2px]">
+              <p className="font-normal underline underline-offset-[4px] decoration-[0.2px] uppercase">
                 {article.title}
               </p>
             </h2>
