@@ -1,0 +1,1 @@
+Day one of the Austin Coffee festival just wrapped and I am filled with thoughts.
