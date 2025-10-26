@@ -11,7 +11,7 @@ function Page() {
           Syndicated Feeds
         </p>
         <p>I'm working on setting up some feeds so that you can subscribe and recieve new posts wherever you please! Once I get that working, you'll be able to subscribe here:</p>
-        <li>RSS: <Link className="underline underline-offset-4">https://coffeeatx.com/feeds/main</Link></li>
+        <li>RSS: <Link href="https://coffeeatx.com/feeds/main" className="underline underline-offset-4">https://coffeeatx.com/feeds/main</Link></li>
         <li>JSON: <Link className="underline underline-offset-4">https://coffeeatx.com/feeds/json</Link></li>
       </article>
     </Layout>

@@ -42,13 +42,13 @@ function getBlogPostsFromMarkdown(directoryPath) {
 
         if (
           postData.title &&
-          postData.link &&
+          postData.slug &&
           postData.description &&
           postData.pubDate
         ) {
           posts.push({
             title: postData.title,
-            link: postData.link,
+            slug: postData.slug,
             description: postData.description,
             pubDate: postData.pubDate,
           });
@@ -97,7 +97,7 @@ function generateRssFeed(posts) {
 `;
 
   posts.forEach((post) => {
-    if (!post.title || !post.link || !post.description || !post.pubDate) {
+    if (!post.title || !post.slug || !post.description || !post.pubDate) {
       console.warn(
         `[WARNING] Skipping malformed blog post due to missing data: ${JSON.stringify(post)}`,
       );
@@ -105,7 +105,7 @@ function generateRssFeed(posts) {
     }
 
     const title = escapeXml(post.title);
-    const link = escapeXml(post.link);
+    const link = escapeXml("https://coffeeatx.com/articles/" + post.slug);
     const description = escapeXml(post.description);
     let pubDate;
 

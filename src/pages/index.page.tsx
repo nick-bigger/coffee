@@ -3,6 +3,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import ATXCoffeeFestContent from "../articles/austin-coffee-fest.md?raw";
 import CoffeeGroundsContent from "../articles/coffee-grounds.md?raw";
 import { Layout } from "../components/Layout";
+import { Link } from "../components/Link";
 
 export { Page };
 
@@ -18,9 +19,9 @@ function Page() {
         {articles.map((article) => (
           <section key={article.slug} className="space-y-4">
             <h2 className="text-lg font-normal mt-0">
-              <p className="font-normal underline underline-offset-[4px] decoration-[0.2px] uppercase">
+              <Link href={`/articles/${article.slug}`} className="uppercase underline underline-offset-[4px] decoration-[0.2px]">
                 {article.title}
-              </p>
+              </Link>
             </h2>
             <Markdown
             remarkPlugins={[remarkFrontmatter]}
