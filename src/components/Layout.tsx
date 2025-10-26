@@ -4,12 +4,17 @@ import { Link } from "./Link";
 export function Layout({ children }: React.PropsWithChildren) {
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
-      <header className="max-w-5xl w-full px-8 pt-8 md:px-12 md:pt-12 lg:px-16 lg:pt-16 mb-16">
-      <h1 className="!text-3xl !mb-0 font-bold tracking-[1px] !text-[#d4d4d4]">
-        <Link href="/">
-            COFFEE GROUNDS
-        </Link>
-      </h1>
+      <header className="max-w-5xl w-full px-8 pt-8 md:px-12 md:pt-12 lg:px-16 lg:pt-16 mb-16 flex flex-col md:flex-row md:justify-between md:items-center">
+        <h1 className="!text-3xl !mb-0 font-bold tracking-[1px] !text-[#d4d4d4]">
+          <Link href="/">
+              COFFEE GROUNDS
+          </Link>
+        </h1>
+        <ul className="flex space-x-4 mt-4 md:mt-0 md:hidden">
+          <li className="font-semibold tracking-[1px]"><Link href="/about">ABOUT</Link></li>
+          <li className="font-semibold tracking-[1px]"><Link href="/contact">CONTACT</Link></li>
+          <li className="font-semibold tracking-[1px]"><Link href="/feeds">FEEDS</Link></li>
+        </ul>
       </header>
       
       <div className="flex max-w-5xl w-full px-8 pb-8 md:px-12 md:pb-12 lg:px-16 lg:pb-16">
