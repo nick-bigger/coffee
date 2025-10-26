@@ -22,7 +22,7 @@ export function Layout({ children }: React.PropsWithChildren) {
           </ul>
         </aside>
 
-        <main className="flex-1 md:max-w-xl md:pl-8">
+        <main className="flex-1 max-w-xl md:pl-8">
           {children}
           <footer className="mt-12 pt-6 text-sm">
             © 2025 Coffee Grounds. All rights reserved.
