@@ -5,7 +5,6 @@ import ssr from 'vite-plugin-ssr/plugin';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/coffee",
   plugins: [
     tailwindcss(),
     ssr({ prerender: true }),
