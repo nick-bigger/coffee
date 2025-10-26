@@ -24,21 +24,3 @@ body {
   background-color: #1e1e1e;
   color: #d1d1d1;
 }
-
-/* === Light mode fallback === */
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: #ffffff;
-    color: #1a1a1a;
-  }
-  body {
-    background-color: #ffffff;
-    color: #1a1a1a;
-  }
-  a {
-    color: #3b82f6;
-  }
-  a:hover {
-    color: #2563eb;
-  }
-}
