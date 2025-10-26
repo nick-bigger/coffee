@@ -1,4 +1,5 @@
 import Markdown from "react-markdown";
+import remarkFrontmatter from "remark-frontmatter";
 import ATXCoffeeFestContent from "../articles/austin-coffee-fest.md?raw";
 import CoffeeGroundsContent from "../articles/coffee-grounds.md?raw";
 import { Layout } from "../components/Layout";
@@ -21,7 +22,9 @@ function Page() {
                 {article.title}
               </p>
             </h2>
-            <Markdown components={{
+            <Markdown
+            remarkPlugins={[remarkFrontmatter]}
+            components={{
               a(props) {
                 return <a className="text-sm" {...props} />;
               },

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run generate-rss && tsc -b && vite build",
+    "generate-rss": "node_modules/.bin/ts-node --esm generate-rss.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -17,12 +18,15 @@
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
     "gh-pages": "^6.3.0",
+    "gray-matter": "^4.0.3",
     "postcss": "^8.5.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-markdown": "^10.1.0",
+    "remark-frontmatter": "^5.0.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.14",
+    "ts-node": "^10.9.2",
     "vite-plugin-ssr": "^0.4.142"
   },
   "devDependencies": {

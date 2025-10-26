@@ -1,3 +1,10 @@
+---
+title: Coffee Grounds
+link: https://coffeeatx.com/
+description: Why Austin is the next Coffee City
+pubDate: 2025-10-19T0:00:00.000-05:00
+---
+
 I don’t work in coffee. But I’ve spent the majority of my waking hours this past week in a coffee shop—and I don’t think I’m alone. Neither, apparently, does the Austin City Council, which unanimously agreed last week on a proposal aimed at making it easier than ever to open a coffee shop or truck in Austin [1].
 
 The measure aims to introduce more cafés into Austin’s residential areas to encourage the creation of community spaces as part of the larger Imagine Austin initiative [2]. According to the proposal’s sponsor, Ryan Alter, the updates are intentionally focused on cafés and coffee trucks. The document even calls out Austin shops First Light, Littlefields, and Desnudo by name, highlighting them as examples of the kinds of spaces the city needs more of.
