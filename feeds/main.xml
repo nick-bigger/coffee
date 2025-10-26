@@ -4,24 +4,24 @@
     <title>Coffee Grounds</title>
     <link>https://coffeeatx.com</link>
     <description>The life and love of Austin Coffee</description>
-    <lastBuildDate>Sun, 26 Oct 2025 17:23:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2025 17:40:01 GMT</lastBuildDate>
     <generator>Custom RSS Feed Generator</generator>
     <language>en-us</language>
 
     <item>
       <title>Austin Coffee Fest</title>
-      <link>https://coffeeatx.com/</link>
+      <link>https://coffeeatx.com/articles/atx-coffee-fest</link>
       <description>Thoughts and experiences at Austin Coffee Fest 2025</description>
       <pubDate>Sun, 26 Oct 2025 05:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://coffeeatx.com/</guid>
+      <guid isPermaLink="true">https://coffeeatx.com/articles/atx-coffee-fest</guid>
     </item>
 
     <item>
       <title>Coffee Grounds</title>
-      <link>https://coffeeatx.com/</link>
+      <link>https://coffeeatx.com/articles/coffee-grounds</link>
       <description>Why Austin is the next Coffee City</description>
       <pubDate>Sun, 19 Oct 2025 05:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://coffeeatx.com/</guid>
+      <guid isPermaLink="true">https://coffeeatx.com/articles/coffee-grounds</guid>
     </item>
 
   </channel>
