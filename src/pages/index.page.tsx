@@ -1,18 +1,12 @@
 import Markdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
-import ATXCoffeeFestContent from "../articles/austin-coffee-fest.md?raw";
-import CoffeeGroundsContent from "../articles/coffee-grounds.md?raw";
 import { Layout } from "../components/Layout";
 import { Link } from "../components/Link";
+import { type Article } from "../utils";
 
 export { Page };
 
-function Page() {
-  const articles = [
-    { slug: "atx-coffee-fest", title: "ATX Coffee Fest", content: ATXCoffeeFestContent },
-    { slug: "coffee-grounds", title: "Coffee Grounds", content: CoffeeGroundsContent },
-  ];
-
+function Page({ articles }: { articles: Article[] }) {
   return (
     <Layout>
       <article className="mb-12 space-y-24">
@@ -24,16 +18,17 @@ function Page() {
               </Link>
             </h2>
             <Markdown
-            remarkPlugins={[remarkFrontmatter]}
-            components={{
-              a(props) {
-                return <a className="text-sm" {...props} />;
-              },
-              p(props) {
-                return <p className="leading-[23px]" {...props} />;
-              }
-            }}>
-                {article.content}
+              remarkPlugins={[remarkFrontmatter]}
+              components={{
+                a(props) {
+                  return <a className="text-sm" {...props} />;
+                },
+                p(props) {
+                  return <p className="leading-[23px]" {...props} />;
+                }
+              }}
+            >
+              {article.content}
             </Markdown>
           </section>
         ))}
