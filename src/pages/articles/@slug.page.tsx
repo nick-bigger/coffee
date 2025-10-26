@@ -20,15 +20,16 @@ function Page(props: PageProps) {
             </p>
           </h2>
           <Markdown
-            remarkPlugins={[remarkFrontmatter]}
-            components={{
-              a(props) {
-                return <a className="text-sm" {...props} />;
-              },
-              p(props) {
-                return <p className="leading-[23px]" {...props} />;
-              }
-            }}>
+              remarkPlugins={[remarkFrontmatter]}
+              components={{
+                a(props) {
+                  return <a className="text-sm text-blue-300 leading-[23px]" {...props} />;
+                },
+                p(props) {
+                  return <p className="leading-[23px]" {...props} />;
+                }
+              }}
+            >
             {props.content}
           </Markdown>
         </section>

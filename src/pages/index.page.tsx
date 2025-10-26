@@ -21,7 +21,7 @@ function Page({ articles }: { articles: Article[] }) {
               remarkPlugins={[remarkFrontmatter]}
               components={{
                 a(props) {
-                  return <a className="text-sm" {...props} />;
+                  return <a className="text-sm text-blue-300 leading-[23px]" {...props} />;
                 },
                 p(props) {
                   return <p className="leading-[23px]" {...props} />;
