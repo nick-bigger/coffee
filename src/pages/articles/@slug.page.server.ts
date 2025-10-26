@@ -33,3 +33,8 @@ export async function onBeforeRender(pageContext: PageContextBuiltIn) {
     },
   };
 }
+
+export async function prerender() {
+  const urls = Object.keys(articleContents).map((slug) => `/articles/${slug}`);
+  return urls.map((url) => ({ url }));
+}
