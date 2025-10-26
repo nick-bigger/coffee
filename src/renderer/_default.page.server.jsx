@@ -5,6 +5,7 @@ import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 
 import { PageShell } from "./PageShell";
 
+export const passToClient = ["pageProps"];
 export { render };
 
 async function render(pageContext) {
