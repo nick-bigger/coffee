@@ -4,7 +4,9 @@ import { type Article, getArticlesFromMarkdown } from "../utils";
 
 export async function onBeforeRender() {
   const articlesDirectory = path.join(process.cwd(), "src", "articles");
-  const articles = getArticlesFromMarkdown(articlesDirectory);
+  const articles = getArticlesFromMarkdown(articlesDirectory).filter(
+    (article) => !article.draft,
+  );
 
   // Sort articles by pubDate in reverse order (newest first)
   articles.sort(

@@ -51,6 +51,7 @@ function getBlogPostsFromMarkdown(directoryPath) {
             slug: postData.slug,
             description: postData.description,
             pubDate: postData.pubDate,
+            draft: postData.draft || false, // Default to false if not specified
           });
         } else {
           console.warn(
@@ -144,7 +145,9 @@ try {
   const markdownPostsDir = path.join(process.cwd(), "src", "articles");
   console.log(`Reading Markdown posts from: ${markdownPostsDir}`);
 
-  const posts = getBlogPostsFromMarkdown(markdownPostsDir);
+  const posts = getBlogPostsFromMarkdown(markdownPostsDir).filter(
+    (post) => !post.draft,
+  );
 
   const generatedXml = generateRssFeed(posts);
 

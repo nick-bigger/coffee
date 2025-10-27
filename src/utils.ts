@@ -1,11 +1,11 @@
-import { clsx, type ClassValue } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import * as fs from "fs";
 import matter from "gray-matter";
 import * as path from "path";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export interface Article {
@@ -14,6 +14,7 @@ export interface Article {
   description: string;
   pubDate: Date;
   content: string;
+  draft: boolean;
 }
 
 export function getArticlesFromMarkdown(directoryPath: string): Article[] {
@@ -32,6 +33,7 @@ export function getArticlesFromMarkdown(directoryPath: string): Article[] {
           slug?: string;
           description?: string;
           pubDate?: Date;
+          draft?: boolean;
         };
 
         if (
@@ -46,6 +48,7 @@ export function getArticlesFromMarkdown(directoryPath: string): Article[] {
             description: postData.description,
             pubDate: postData.pubDate,
             content: content, // Include the content of the markdown file
+            draft: postData.draft || false, // Default to false if not specified
           });
         } else {
           console.warn(

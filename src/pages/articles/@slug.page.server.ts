@@ -11,6 +11,7 @@ const articleContents: Record<string, string> = {
 type PageProps = {
   title: string;
   content: string;
+  draft: boolean;
 };
 
 export async function onBeforeRender(pageContext: PageContextBuiltIn) {
@@ -24,9 +25,13 @@ export async function onBeforeRender(pageContext: PageContextBuiltIn) {
   const titleMatch = content.match(/title:\s*(.*)/);
   const title = titleMatch ? titleMatch[1].trim() : slug;
 
+  const draftMatch = content.match(/draft:\s*(true)/);
+  const draft = !!draftMatch;
+
   const pageProps: PageProps = {
     title,
     content,
+    draft,
   };
   return {
     pageContext: {
