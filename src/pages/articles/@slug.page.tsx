@@ -8,6 +8,7 @@ export { Page };
 type PageProps = {
   title: string;
   content: string;
+  pubDate: Date;
 };
 
 function Page(props: PageProps) {
@@ -15,11 +16,23 @@ function Page(props: PageProps) {
     <Layout>
       <article className="mb-12 space-y-24">
         <section className="space-y-4">
-          <h2 className="mt-0 text-lg font-normal">
-            <p className="font-normal uppercase underline decoration-[0.2px] underline-offset-[4px]">
+          <div>
+            <h2 className="text-lg uppercase underline decoration-[0.2px] underline-offset-[4px]">
               {props.title}
-            </p>
-          </h2>
+            </h2>
+            <small>
+              {new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                hour12: true,
+                timeZone: "America/Chicago",
+                timeZoneName: "short",
+              }).format(props.pubDate)}
+            </small>
+          </div>
           <Markdown
             remarkPlugins={[remarkFrontmatter]}
             components={{

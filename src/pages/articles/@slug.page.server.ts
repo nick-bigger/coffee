@@ -13,6 +13,7 @@ const articleContents: Record<string, string> = {
 type PageProps = {
   title: string;
   content: string;
+  pubDate: Date;
   draft: boolean;
 };
 
@@ -30,9 +31,13 @@ export async function onBeforeRender(pageContext: PageContextBuiltIn) {
   const draftMatch = content.match(/draft:\s*(true)/);
   const draft = !!draftMatch;
 
+  const pubDateMatch = content.match(/pubDate:\s*(.*)/);
+  const pubDate = pubDateMatch ? new Date(pubDateMatch[1].trim()) : new Date();
+
   const pageProps: PageProps = {
     title,
     content,
+    pubDate,
     draft,
   };
   return {

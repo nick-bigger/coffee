@@ -2,7 +2,7 @@
 title: Coffee Grounds
 slug: coffee-grounds
 description: Why Austin is the next Coffee City
-pubDate: 2025-10-19T0:00:00.000-05:00
+pubDate: 2025-10-19T10:34:00.000-05:00
 ---
 
 I don’t work in coffee. But I’ve spent the majority of my waking hours this past week in a coffee shop—and I don’t think I’m alone. Neither, apparently, does the Austin City Council, which unanimously agreed last week on a proposal aimed at making it easier than ever to open a coffee shop or truck in Austin [[1]](https://services.austintexas.gov/edims/document.cfm?id=459894).

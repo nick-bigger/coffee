@@ -13,14 +13,28 @@ function Page({ articles }: { articles: Article[] }) {
       <article className="mb-12 space-y-24">
         {articles.map((article) => (
           <section key={article.slug} className="space-y-4">
-            <h2 className="mt-0 text-lg font-normal">
-              <Link
-                href={`/articles/${article.slug}`}
-                className="uppercase underline decoration-[0.2px] underline-offset-[4px]"
-              >
-                {article.title}
-              </Link>
-            </h2>
+            <div>
+              <h2 className="mt-0 text-lg font-normal">
+                <Link
+                  href={`/articles/${article.slug}`}
+                  className="uppercase underline decoration-[0.2px] underline-offset-[4px]"
+                >
+                  {article.title}
+                </Link>
+              </h2>
+              <small>
+                {new Intl.DateTimeFormat("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  hour12: true,
+                  timeZone: "America/Chicago",
+                  timeZoneName: "short",
+                }).format(article.pubDate)}
+              </small>
+            </div>
             <Markdown
               remarkPlugins={[remarkFrontmatter]}
               components={{
