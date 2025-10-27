@@ -4,7 +4,7 @@
     <title>Coffee Grounds</title>
     <link>https://coffeeatx.com</link>
     <description>The life and love of Austin Coffee</description>
-    <lastBuildDate>Mon, 27 Oct 2025 04:20:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 05:25:03 GMT</lastBuildDate>
     <generator>Custom RSS Feed Generator</generator>
     <language>en-us</language>
 
@@ -12,8 +12,16 @@
       <title>Coffee Grounds</title>
       <link>https://coffeeatx.com/articles/coffee-grounds</link>
       <description>Why Austin is the next Coffee City</description>
-      <pubDate>Sun, 19 Oct 2025 05:00:00 GMT</pubDate>
+      <pubDate>Sun, 19 Oct 2025 15:34:00 GMT</pubDate>
       <guid isPermaLink="true">https://coffeeatx.com/articles/coffee-grounds</guid>
+    </item>
+
+    <item>
+      <title>Second Palomino Coffee Soft Opens in East Austin</title>
+      <link>https://coffeeatx.com/articles/palomino-coffee-soft-open</link>
+      <description>A quick review of Palomino Coffee&apos;s new shop</description>
+      <pubDate>Mon, 27 Oct 2025 04:22:00 GMT</pubDate>
+      <guid isPermaLink="true">https://coffeeatx.com/articles/palomino-coffee-soft-open</guid>
     </item>
 
   </channel>

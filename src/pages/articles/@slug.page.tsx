@@ -30,7 +30,7 @@ function Page(props: PageProps) {
                 hour12: true,
                 timeZone: "America/Chicago",
                 timeZoneName: "short",
-              }).format(props.pubDate)}
+              }).format(new Date(props.pubDate))}
             </small>
           </div>
           <Markdown

@@ -32,7 +32,13 @@ export async function onBeforeRender(pageContext: PageContextBuiltIn) {
   const draft = !!draftMatch;
 
   const pubDateMatch = content.match(/pubDate:\s*(.*)/);
-  const pubDate = pubDateMatch ? new Date(pubDateMatch[1].trim()) : new Date();
+  let pubDate: Date;
+  if (pubDateMatch) {
+    const parsedDate = new Date(pubDateMatch[1].trim());
+    pubDate = isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
+  } else {
+    pubDate = new Date();
+  }
 
   const pageProps: PageProps = {
     title,
