@@ -2,12 +2,14 @@ import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
 import ATXCoffeeFestContent from "../../articles/austin-coffee-fest.md?raw";
 import CoffeeGroundsContent from "../../articles/coffee-grounds.md?raw";
+import LuannesNewHome from "../../articles/luannes-looking-for-a-new-home.md?raw";
 import PalominoSoftOpen from "../../articles/palomino-soft-open.md?raw";
 
 const articleContents: Record<string, string> = {
   "atx-coffee-fest": ATXCoffeeFestContent,
   "coffee-grounds": CoffeeGroundsContent,
   "palomino-coffee-soft-open": PalominoSoftOpen,
+  "luannes-looking-for-a-new-home": LuannesNewHome,
 };
 
 type PageProps = {
