@@ -1,6 +1,5 @@
 ---
 title: Second Palomino Coffee Soft Opens in East Austin
-slug: palomino-coffee-soft-open
 description: A quick review of Palomino Coffee's new shop
 pubDate: 2025-10-26T23:22:00.000-05:00
 ---

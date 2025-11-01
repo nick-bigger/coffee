@@ -30,21 +30,15 @@ export function getArticlesFromMarkdown(directoryPath: string): Article[] {
 
         const postData = data as {
           title?: string;
-          slug?: string;
           description?: string;
           pubDate?: Date;
           draft?: boolean;
         };
 
-        if (
-          postData.title &&
-          postData.slug &&
-          postData.description &&
-          postData.pubDate
-        ) {
+        if (postData.title && postData.description && postData.pubDate) {
           articles.push({
             title: postData.title,
-            slug: postData.slug,
+            slug: file.split(".")[0],
             description: postData.description,
             pubDate: postData.pubDate,
             content: content, // Include the content of the markdown file

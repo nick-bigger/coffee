@@ -1,16 +1,14 @@
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 
-import ATXCoffeeFestContent from "../../articles/austin-coffee-fest.md?raw";
-import CoffeeGroundsContent from "../../articles/coffee-grounds.md?raw";
-import LuannesNewHome from "../../articles/luannes-looking-for-a-new-home.md?raw";
-import PalominoSoftOpen from "../../articles/palomino-soft-open.md?raw";
+const modules = import.meta.glob("../../articles/*.md", { as: "raw" });
 
-const articleContents: Record<string, string> = {
-  "atx-coffee-fest": ATXCoffeeFestContent,
-  "coffee-grounds": CoffeeGroundsContent,
-  "palomino-coffee-soft-open": PalominoSoftOpen,
-  "luannes-looking-for-a-new-home": LuannesNewHome,
-};
+const articleContents: Record<string, string> = {};
+
+// Dynamically pull in article content.
+for (const path in modules) {
+  const slug = path.replace("../../articles/", "").replace(/\.md$/, "");
+  articleContents[slug] = (await modules[path]()) as string;
+}
 
 type PageProps = {
   title: string;

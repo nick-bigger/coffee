@@ -1,6 +1,5 @@
 ---
 title: Coffee Grounds
-slug: coffee-grounds
 description: Why Austin is the next Coffee City
 pubDate: 2025-10-19T10:34:00.000-05:00
 ---

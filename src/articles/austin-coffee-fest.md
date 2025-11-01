@@ -1,6 +1,5 @@
 ---
 title: Austin Coffee Fest 2025
-slug: atx-coffee-fest
 description: Thoughts and experiences at Austin Coffee Fest 2025
 pubDate: 2025-10-26T10:12:00.000-05:00
 ---
