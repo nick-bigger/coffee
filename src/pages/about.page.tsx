@@ -18,6 +18,7 @@ function Page() {
           and passionate thing. This is my side! Everything written here is my
           opinion and my opinion only.
         </p>
+        <p>I don't run ads and don't do sponsored posts.</p>
         <p>Thanks for stopping by. :)</p>
       </article>
     </Layout>
