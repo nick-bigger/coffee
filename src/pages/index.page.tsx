@@ -16,19 +16,23 @@ function Page({ articles }: { articles: Article[] }) {
         {articles.map((article) => (
           <section key={article.slug} className="space-y-4">
             <div>
-              <div className="flex items-center gap-2">
+              <div>
                 <Link
                   href={article.link}
                   target="_blank"
-                  className="uppercase underline decoration-[0.2px] underline-offset-[4px]"
+                  className="text-lg uppercase underline decoration-[0.2px] underline-offset-[4px]"
                 >
-                  <h2 className="mt-0 text-lg font-normal">{article.title}</h2>
+                  {article.title}
                 </Link>
                 <Link
+                  className="ml-1"
                   href={`/articles/${article.slug}`}
                   title={`Permanent link to ${article.title}`}
                 >
-                  <LinkIcon className="m-1 h-4" />
+                  <LinkIcon
+                    className="mx-2 mb-1 inline justify-center"
+                    size={14}
+                  />
                 </Link>
               </div>
               <small>
