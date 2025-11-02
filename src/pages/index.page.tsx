@@ -1,3 +1,5 @@
+import { format } from "date-fns/format";
+import { Link as LinkIcon } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
 
@@ -14,25 +16,24 @@ function Page({ articles }: { articles: Article[] }) {
         {articles.map((article) => (
           <section key={article.slug} className="space-y-4">
             <div>
-              <h2 className="mt-0 text-lg font-normal">
+              <div className="flex items-center gap-2">
                 <Link
-                  href={`/articles/${article.slug}`}
+                  href={article.link}
+                  target="_blank"
                   className="uppercase underline decoration-[0.2px] underline-offset-[4px]"
                 >
-                  {article.title}
+                  <h2 className="mt-0 text-lg font-normal">{article.title}</h2>
                 </Link>
-              </h2>
+                <Link
+                  href={`/articles/${article.slug}`}
+                  title={`Permanent link to ${article.title}`}
+                >
+                  <LinkIcon className="m-1 h-4" />
+                </Link>
+              </div>
               <small>
-                {new Intl.DateTimeFormat("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                  hour12: true,
-                  timeZone: "America/Chicago",
-                  timeZoneName: "short",
-                }).format(article.pubDate)}
+                {format(article.pubDate, "PPP")} at{" "}
+                {format(article.pubDate, "p")} CST
               </small>
             </div>
             <Markdown

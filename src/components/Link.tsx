@@ -4,7 +4,7 @@ import { cn } from "@/utils";
 
 export { Link };
 
-function Link({ href, children, className }: HTMLProps<HTMLAnchorElement>) {
+function Link({ href, className, ...props }: HTMLProps<HTMLAnchorElement>) {
   if (href?.startsWith("/")) {
     href = import.meta.env.BASE_URL + href;
     href = normalize(href);
@@ -17,9 +17,8 @@ function Link({ href, children, className }: HTMLProps<HTMLAnchorElement>) {
         "py-1 text-[#d4d4d4] no-underline hover:bg-[#383838]",
         className,
       )}
-    >
-      {children}
-    </a>
+      {...props}
+    />
   );
 }
 

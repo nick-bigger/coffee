@@ -14,6 +14,7 @@ export interface Article {
   description: string;
   pubDate: Date;
   content: string;
+  link: string;
   draft: boolean;
 }
 
@@ -32,15 +33,22 @@ export function getArticlesFromMarkdown(directoryPath: string): Article[] {
           title?: string;
           description?: string;
           pubDate?: Date;
+          link?: string;
           draft?: boolean;
         };
 
-        if (postData.title && postData.description && postData.pubDate) {
+        if (
+          postData.title &&
+          postData.description &&
+          postData.pubDate &&
+          postData.link
+        ) {
           articles.push({
             title: postData.title,
             slug: file.split(".")[0],
             description: postData.description,
             pubDate: postData.pubDate,
+            link: postData.link,
             content: content, // Include the content of the markdown file
             draft: postData.draft || false, // Default to false if not specified
           });

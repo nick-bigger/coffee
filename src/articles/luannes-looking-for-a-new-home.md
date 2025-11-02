@@ -1,6 +1,7 @@
 ---
 title: Luanne's Looking for a New Home
 description: East Austin Coffee Shop Luanne's is looking for a new home
+link: https://www.instagram.com/luannescoffee/
 pubDate: 2025-10-28T18:58:00.000-05:00
 ---
 
