@@ -43,7 +43,7 @@ async function render(pageContext) {
         crossOrigin=""
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
         rel="stylesheet"
       />
       <meta charset="UTF-8" />
