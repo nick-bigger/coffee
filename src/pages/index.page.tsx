@@ -54,6 +54,14 @@ function Page({ articles }: { articles: Article[] }) {
                 p(props) {
                   return <p className="leading-[23px]" {...props} />;
                 },
+                blockquote(props) {
+                  return (
+                    <blockquote
+                      className="border-l-1 border-[rgb(74,68,68)] pl-4"
+                      {...props}
+                    />
+                  );
+                },
               }}
             >
               {article.content}
