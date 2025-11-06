@@ -1,6 +1,6 @@
 ---
 title: Coffee Grounds
-description: Why Austin is the next Coffee City.
+description: Why Austin is the next coffee city.
 link: https://services.austintexas.gov/edims/document.cfm?id=459894
 pubDate: 2025-10-19T10:34:00.000-05:00
 ---
