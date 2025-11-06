@@ -58,7 +58,7 @@ async function render(pageContext) {
         name="og:description"
         content="${descriptionContent}"
       />
-      <meta property="og:image" content="${ogImageContent}" />
+      <meta property="og:image" content="https://coffeeatx.com/cg-wide-card.png" />
       <meta property="og:type" content="article" />
       <meta name="msapplication-TileColor" content="#111827" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
