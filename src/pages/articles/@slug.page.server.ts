@@ -15,6 +15,7 @@ type PageProps = {
   content: string;
   pubDate: Date;
   draft: boolean;
+  description: string;
 };
 
 export async function onBeforeRender(pageContext: PageContextBuiltIn) {
@@ -40,15 +41,24 @@ export async function onBeforeRender(pageContext: PageContextBuiltIn) {
     pubDate = new Date();
   }
 
+  const descriptionMatch = content.match(/description:\s*(.*)/);
+  const description = descriptionMatch
+    ? descriptionMatch[1].trim()
+    : content.split("\n")[0].trim(); // Take the first line as description if not specified
+
   const pageProps: PageProps = {
     title,
     content,
     pubDate,
     draft,
+    description,
   };
+
   return {
     pageContext: {
       pageProps,
+      title, // Pass title to pageContext for use in _default.page.server.jsx
+      description, // Pass description to pageContext for use in _default.page.server.jsx
     },
   };
 }

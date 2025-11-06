@@ -5,16 +5,22 @@ import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr/server";
 
 import { PageShell } from "./PageShell";
 
-export const passToClient = ["pageProps"];
+export const passToClient = ["pageProps", "title", "description"];
 export { render };
 
 async function render(pageContext) {
-  const { Page, pageProps } = pageContext;
+  const { Page, pageProps, title, description } = pageContext;
   const pageHtml = ReactDOMServer.renderToString(
     <PageShell>
       <Page {...pageProps} />
     </PageShell>,
   );
+
+  const titleContent = title ? `Coffee Grounds: ${title}` : "Coffee Grounds";
+  const descriptionContent =
+    description ||
+    "Coffee Grounds is my place to write about the growing coffee scene in Austin, Texas and all of it's many facets along the way.";
+  const ogImageContent = "https://coffeeatx.com/cg-wide-card.png";
 
   return escapeInject`<!DOCTYPE html>
     <html>
@@ -48,11 +54,13 @@ async function render(pageContext) {
       />
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="og:title" content="Coffee Grounds" />
+      <meta name="og:title" content="${titleContent}" />
       <meta
         name="og:description"
-        content="the official website for me AKA nick bigger AKA conifer crown. includes a blog, poetry, songs, and random thoughts: information hub, creative dump, and life repository"
+        content="${descriptionContent}"
       />
+      <meta property="og:image" content="${ogImageContent}" />
+      <meta property="og:type" content="article" />
       <meta name="msapplication-TileColor" content="#111827" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta
@@ -111,7 +119,20 @@ async function render(pageContext) {
         title="RSS Feed"
         href="/feeds/rss.xml"
       />
-      <title>Coffee Grounds</title>
+      <title>${titleContent}</title>
+      <meta name="description" content="${descriptionContent}" />
+      <meta property="og:title" content="${titleContent}" />
+      <meta property="og:description" content="${descriptionContent}" />
+      <meta property="og:image" content="${ogImageContent}" />
+      <meta property="og:type" content="article" />
+      <!-- Twitter stuff -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@coffeeatx" />
+      <meta name="twitter:creator" content="@coffeeatx" />
+      <meta name="twitter:title" content="${titleContent}" />
+      <meta name="twitter:description" content="${descriptionContent}" />
+      <meta name="twitter:image" content="${ogImageContent}" />
+      <!-- End Twitter stuff -->
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -121,7 +142,7 @@ async function render(pageContext) {
               "@id": "https://coffeeatx.com/#website",
               "url": "https://coffeeatx.com",
               "name": "Coffee Grounds",
-              "description": "the official website for me AKA nick bigger AKA conifer crown. includes a blog, poetry, songs, and random thoughts: information hub, creative dump, and life repository",
+              "description": "Coffee Grounds is my place to write about the growing coffee scene in Austin, Texas and all of it's many facets along the way.",
               "publisher": {
                 "@id": "https://coffeeatx.com/#person"
               },

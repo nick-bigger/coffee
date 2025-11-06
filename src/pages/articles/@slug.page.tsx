@@ -1,3 +1,4 @@
+import { format } from "date-fns/format";
 import Markdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
 
@@ -21,16 +22,7 @@ function Page(props: PageProps) {
               {props.title}
             </h2>
             <small>
-              {new Intl.DateTimeFormat("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "numeric",
-                hour12: true,
-                timeZone: "America/Chicago",
-                timeZoneName: "short",
-              }).format(new Date(props.pubDate))}
+              {format(props.pubDate, "PPP")} at {format(props.pubDate, "p")} CST
             </small>
           </div>
           <Markdown
