@@ -1,6 +1,6 @@
 ---
 title: Klerje Coffee Expands
-description: Klerje Coffee Opens Brand New Expanded Space
+description: Klerje Coffee Opens Brand New Expanded Space.
 link: https://www.klerjecoffee.com
 pubDate: 2025-08-01T23:03:00.000-05:00
 ---

@@ -1,6 +1,6 @@
 ---
 title: Austin Coffee Fest 2025
-description: Thoughts and experiences at Austin Coffee Fest 2025
+description: Thoughts and experiences at Austin Coffee Fest 2025.
 link: https://www.austincoffeefestival.com
 pubDate: 2025-10-26T10:12:00.000-05:00
 ---

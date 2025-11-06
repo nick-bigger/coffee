@@ -1,6 +1,6 @@
 ---
 title: The Coffee Crisis No One is Talking About
-description: Thoughts on a video discussing the collision of multiple issues facing contemporary coffee culture
+description: Thoughts on a video discussing the collision of multiple issues facing contemporary coffee culture.
 link: https://www.youtube.com/watch?v=6z6jZoVGNpI&t=27s
 pubDate: 2025-11-01T20:12:00.000-05:00
 ---

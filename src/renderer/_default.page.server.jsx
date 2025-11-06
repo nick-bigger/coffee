@@ -20,7 +20,6 @@ async function render(pageContext) {
   const descriptionContent =
     description ||
     "Coffee Grounds is my place to write about the growing coffee scene in Austin, Texas and all of it's many facets along the way.";
-  const ogImageContent = "https://coffeeatx.com/cg-wide-card.png";
 
   return escapeInject`<!DOCTYPE html>
     <html>
@@ -123,15 +122,15 @@ async function render(pageContext) {
       <meta name="description" content="${descriptionContent}" />
       <meta property="og:title" content="${titleContent}" />
       <meta property="og:description" content="${descriptionContent}" />
-      <meta property="og:image" content="${ogImageContent}" />
+      <meta property="og:image" content="https://coffeeatx.com/cg-wide-card.png" />
       <meta property="og:type" content="article" />
       <!-- Twitter stuff -->
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="@coffeeatx" />
-      <meta name="twitter:creator" content="@coffeeatx" />
+      <meta name="twitter:creator" content="@conifercrown" />
       <meta name="twitter:title" content="${titleContent}" />
       <meta name="twitter:description" content="${descriptionContent}" />
-      <meta name="twitter:image" content="${ogImageContent}" />
+      <meta name="twitter:image" content="https://coffeeatx.com/cg-wide-card.png" />
       <!-- End Twitter stuff -->
       <script type="application/ld+json">
         {
