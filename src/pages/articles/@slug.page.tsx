@@ -1,6 +1,6 @@
 import { format } from "date-fns/format";
-import Markdown from "react-markdown";
-import remarkFrontmatter from "remark-frontmatter";
+
+import { Markdown } from "@/components/Markdown";
 
 import { Layout } from "../../components/Layout";
 
@@ -25,24 +25,7 @@ function Page(props: PageProps) {
               {format(props.pubDate, "PPP")} at {format(props.pubDate, "p")} CST
             </small>
           </div>
-          <Markdown
-            remarkPlugins={[remarkFrontmatter]}
-            components={{
-              a(props) {
-                return (
-                  <a
-                    className="text-sm leading-[23px] text-blue-300"
-                    {...props}
-                  />
-                );
-              },
-              p(props) {
-                return <p className="leading-[23px]" {...props} />;
-              },
-            }}
-          >
-            {props.content}
-          </Markdown>
+          <Markdown>{props.content}</Markdown>
         </section>
       </article>
     </Layout>

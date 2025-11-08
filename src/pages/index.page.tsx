@@ -1,11 +1,11 @@
 import { format } from "date-fns/format";
 import { Link as LinkIcon } from "lucide-react";
-import Markdown from "react-markdown";
-import remarkFrontmatter from "remark-frontmatter";
+
+import type { Article } from "@/utils";
 
 import { Layout } from "../components/Layout";
 import { Link } from "../components/Link";
-import { type Article } from "../utils";
+import { Markdown } from "../components/Markdown";
 
 export { Page };
 
@@ -40,32 +40,7 @@ function Page({ articles }: { articles: Article[] }) {
                 {format(article.pubDate, "p")} CST
               </small>
             </div>
-            <Markdown
-              remarkPlugins={[remarkFrontmatter]}
-              components={{
-                a(props) {
-                  return (
-                    <a
-                      className="text-sm leading-[23px] text-blue-300"
-                      {...props}
-                    />
-                  );
-                },
-                p(props) {
-                  return <p className="leading-[23px]" {...props} />;
-                },
-                blockquote(props) {
-                  return (
-                    <blockquote
-                      className="border-l-1 border-[rgb(74,68,68)] pl-4"
-                      {...props}
-                    />
-                  );
-                },
-              }}
-            >
-              {article.content}
-            </Markdown>
+            <Markdown>{article.content}</Markdown>
           </section>
         ))}
       </article>
