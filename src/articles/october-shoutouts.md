@@ -1,6 +1,6 @@
 ---
 title: October Shoutouts
-description: Best shops of October.
+description: Shortlist of some favorite spots for the month.
 link: https://www.washingtonpost.com/politics/2025/09/19/coffee-tariffs-bill-bacon-khanna/
 pubDate: 2025-11-07T10:01:00.000-05:00
 ---
