@@ -22,7 +22,10 @@ Generally, however, drinks are commonly graded on factors such as:
 
 Which design is drawn is sometimes up to the barista and sometimes pre-assigned, but common designs, _roughly_ in order of difficulty, are as follows:
 
-Heart/Winged Heart [[2]](google.com/search?q=coffee+latte+art+heart&tbm=isch), Tulip [[3]](google.com/search?q=coffee+latte+art+tulip&tbm=isch), Rosetta/Rosie [[4]](google.com/search?q=coffee+latte+art+rosetta&tbm=isch), Swan/Bunny/Turtle/Other Free Pour [[5]](google.com/search?q=coffee+latte+art+swan&tbm=isch)
+- Heart/Winged Heart [[2]](google.com/search?q=coffee+latte+art+heart&tbm=isch)
+- Tulip [[3]](google.com/search?q=coffee+latte+art+tulip&tbm=isch)
+- Rosetta/Rosie [[4]](google.com/search?q=coffee+latte+art+rosetta&tbm=isch)
+- Swan/Bunny/Turtle/Other Free Pour [[5]](google.com/search?q=coffee+latte+art+swan&tbm=isch)
 
 Within each category there are _many_ variations and combinations that can change the difficulty of execution. Other factors such as type of milk and size of drink can also make certain designs more difficult. In general, the most common design tends to be some variant of the Rosetta, as it strikes a good middle point in overall design difficulty, and it has a wide range of possible variants that allows baristas to express themselves and modulate difficulty further.
 
